@@ -1,0 +1,59 @@
+﻿@model IEnumerable<_12945_egzamin_asp.Models.ModelTask>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Indeks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trasa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spalanie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odległość)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kwota)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indeks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spalanie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odległość)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kwota)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

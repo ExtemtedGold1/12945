@@ -1,0 +1,53 @@
+﻿@model _12945_egzamin_asp.Models.ModelTask
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ModelTask</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Indeks" class="control-label"></label>
+                <input asp-for="Indeks" class="form-control" />
+                <span asp-validation-for="Indeks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trasa" class="control-label"></label>
+                <input asp-for="Trasa" class="form-control" />
+                <span asp-validation-for="Trasa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spalanie" class="control-label"></label>
+                <input asp-for="Spalanie" class="form-control" />
+                <span asp-validation-for="Spalanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odległość" class="control-label"></label>
+                <input asp-for="Odległość" class="form-control" />
+                <span asp-validation-for="Odległość" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kwota" class="control-label"></label>
+                <input asp-for="Kwota" class="form-control" />
+                <span asp-validation-for="Kwota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
